@@ -29,14 +29,11 @@ def apply_single_echo(x, sr, delay_sec=0.3, decay=0.6):
 
     return y
 
-# Đọc file âm thanh gốc
 input_file = "input_signals/lab_female.wav" 
 x, sr = librosa.load(input_file, sr=None)
 
-# Thêm hiệu ứng echo đơn
 y = apply_single_echo(x, sr, delay_sec=0.4, decay=0.5)
 
-# Lưu file kết quả
 output_file = "output_signals/output_echosingle.wav"
 sf.write(output_file, y, sr)
 

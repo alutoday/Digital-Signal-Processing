@@ -10,7 +10,7 @@ if len(ir.shape) > 1:
 else:
     ir_mono = ir  # Nếu đã là mono thì giữ nguyên
 
-# Lưu IR mới thành ir2.wav
+
 sf.write("ir2.wav", ir_mono, sr)
 
 print("Đã chuyển đổi IR từ stereo thành mono và lưu vào 'ir2.wav'")

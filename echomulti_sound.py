@@ -31,14 +31,11 @@ def apply_echo(x, sr, delay_sec=0.3, decay=0.6, num_echoes=5):
 
     return y
 
-# Đọc file âm thanh gốc
 input_file = "input_signals/lab_female.wav" 
 x, sr = librosa.load(input_file, sr=None)
 
-# Thêm hiệu ứng echo
 y = apply_echo(x, sr, delay_sec=0.4, decay=0.5, num_echoes=6)
 
-# Lưu file kết quả
 output_file = "output_signals/output_echomulti.wav"
 sf.write(output_file, y, sr)
 
